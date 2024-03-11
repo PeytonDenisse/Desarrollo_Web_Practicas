@@ -91,9 +91,9 @@ body {
 
 .titulos {
   position: absolute;
-  top: 230px; /* Ajusta la posición vertical según sea necesario */
-  left: 130px; /* Ajusta la posición horizontal según sea necesario */
-  color: #ffffff; /* Color blanco para los títulos */
+  top: 230px; 
+  left: 130px; 
+  color: #ffffff; 
 }
 
 .titulo-h2{
@@ -107,8 +107,8 @@ body {
 
 .iconos {
   position: relative;
-  width: 50px; /* Ancho del hexágono */
-  height: 57.735px; /* Calculado para mantener la proporción del hexágono */
+  width: 50px; 
+  height: 57.735px; 
 }
 
 .hexagon, .figure {
@@ -140,31 +140,31 @@ body {
 
 }
 .titulos .col h4,.titulos .col h3 {
-    white-space: nowrap; /* Evita que los textos se dividan en líneas */
+    white-space: nowrap;
   }
   
 
 .titulos .col h4 {
-  font-size: 0.8rem; /* Cambia el tamaño del texto h4 */
-  font-weight: 300; /* Establece el grosor de la letra en más delgado */
-  text-align: left; /* Alinea el texto a la izquierda */
-  margin-bottom: 0; /* Elimina el espacio entre el h4 y el h3 */
+  font-size: 0.8rem; 
+  font-weight: 300; 
+  text-align: left; 
+  margin-bottom: 0; 
 }
 
 .titulos .col h3 {
-  font-size: 1rem; /* Cambia el tamaño del texto h3 */
-  font-weight: 500; /* Establece el grosor de la letra en más grueso */
-  text-align: left; /* Alinea el texto a la izquierda */
-  margin-top: 0; /* Elimina el espacio entre el h4 y el h3 */
-  margin-bottom: 0; /* Elimina el espacio entre el h3 y el siguiente elemento */
-  white-space: nowrap; /* Evita que el texto se divida en dos líneas */
+  font-size: 1rem;
+  font-weight: 500; 
+  text-align: left; 
+  margin-top: 0; 
+  margin-bottom: 0; 
+  white-space: nowrap;
   margin-left: 75px;
 }
 
 .iconos2{
   position: relative;
-  width: 50px; /* Ancho del hexágono */
-  height: 57.735px; /* Calculado para mantener la proporción del hexágono */
+  width: 50px;
+  height: 57.735px; 
   margin-top: 150px;
 }
 
@@ -177,11 +177,11 @@ body {
 }
 
 .col.px-1.text-center h3.t4 {
-  font-size: 1.0rem; /* Tamaño de fuente para h3 */
+  font-size: 1.0rem; 
 }
 
 .col.px-1.text-center h4.t5 {
-  font-size: 2.0rem; /* Tamaño de fuente para h4 */
+  font-size: 2.0rem;
 }
 
 
@@ -264,11 +264,11 @@ h4{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 120px; /* Ajusta el tamaño del hexágono según sea necesario */
-  height: 138px; /* Ajusta el tamaño del hexágono según sea necesario */
+  width: 120px; 
+  height: 138px; 
   background-color: transparent;
   clip-path: polygon(50% 0%, 82% 25%, 82% 75%, 50% 100%, 18% 75%, 18% 25%);
-  border: 2px solid rgb(197, 18, 18); /* Borde blanco */
+  border: 2px solid rgb(197, 18, 18);
 }
 
 .image-container {
