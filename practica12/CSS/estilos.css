@@ -1,0 +1,30 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: black;
+    background-color: azure;
+    margin: 0;
+    padding: 0;
+
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    font-size: 80px;
+    font-weight: bold;
+    text-align: center;
+}
+
+div {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: 
+    radial-gradient(at 27% 13%, hsla(268, 19%, 83%, 0.22) 0px, transparent 50%), 
+    radial-gradient(at 13% 64%, hsla(0, 93%, 49%, 0.55) 0px, transparent 50%),
+    radial-gradient(at 94% 36%, hsla(276, 93%, 37%, 0.55) 0px, transparent 50%)
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    img{
+        width: 300px;
+        height: 300px;
+    }
+
+
+    #pop{
+        /*filter: blur(5px);*/
+        /*filter: brightness(0.5);*/
+        filter: invert(1);
+        /*filter: sepia(1);*/
+        /*filter: blur(5px) brightness(0.5) invert(1) sepia(1);*/
+    }
+
+    #pop2{
+        filter: blur(5px);
+        /*filter: brightness(0.5);*/
+        /*filter: invert(1);*/
+        /*filter: sepia(1);*/
+        /*filter: blur(5px) brightness(0.5) invert(1) sepia(1);*/
+    }
+
+    #pop3{
+        /*filter: blur(5px);*/
+        filter: brightness(0.5);
+        /*filter: invert(1);*/
+        /*filter: sepia(1);*/
+        /*filter: blur(5px) brightness(0.5) invert(1) sepia(1);*/
+    }
+    
+    @keyframes pop {
+        0%{
+            transform: scale(1);
+        }
+        50%{
+            transform: scale(1.5);
+        }
+        100%{
+            transform: scale(1);
+        }
+    
+    }
+
+
+</style>
+<body>
+<h1>The Weeknd</h1>
+    <img id="pop" src="https://i.pinimg.com/originals/68/d1/26/68d126de72d2dead4920b9e09fa6af8b.jpg" alt="">
+    <img id="pop2" src="https://th.bing.com/th/id/OIP.i1PDDLKOE7rTpzAOJ3RJcAHaHa?rs=1&pid=ImgDetMain" alt="">
+    <img id="pop3" src="https://th.bing.com/th/id/R.bec6f0cf36416d44f6f45fc87c80982c?rik=cMZXpou3JiZV%2bg&riu=http%3a%2f%2ffc07.deviantart.net%2ffs70%2fi%2f2012%2f072%2f5%2f7%2fxo_weeknd_logo___psd_by_phrixxxus-d4smp8u.png&ehk=gz%2bxU9QqPIn72qJRu%2baxwKavVsm2BKNBxZEI6%2fqPL14%3d&risl=&pid=ImgRaw&r=0" alt="">
+
+</body>
+</html>
