@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="favicons/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="favicons/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="favicons/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="favicons/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="favicons/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="favicons/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="favicons/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="favicons/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicons/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="favicons/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="favicons/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicons/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="favicons/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+
+    <style>
+
+  
+      
+
+      body {
+        font-family: "Arimo", sans-serif;
+        background-color: rgb(0, 0, 0);
+      }
+      #fotoPerfil {
+        border-radius: 50%;
+      }
+
+      .container-fluid-cards {
+        padding-top: 100px;
+      }
+
+      .container-carrusel {
+        padding-top: 100px;
+        padding-inline: 30px;
+      }
+
+      .custom-btn {
+        text-align: center; 
+        display: inline-block;
+      }
+
+      #Proyecto1 {
+        padding-top: 20px;
+        padding-inline: 30px;
+      }
+
+      #carrusel2 {
+        padding-top: 20px;
+        padding-inline: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-12"></div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <nav class="navbar bg-body-tertiary fixed-top" data-bs-theme="dark">
+            <div class="container-fluid">
+              <img src="imagenes/icons8-pandora-app.svg" alt="" width="80px" />
+              <a class="navbar-brand" href="#">Desarrollo Web</a>
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Practicas</a
+                  >
+                </li>
+              </ul>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div
+                class="offcanvas offcanvas-end"
+                tabindex="-1"
+                id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel"
+              >
+                <div class="offcanvas-header">
+                  <!--<h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>-->
+                  <img
+                    id="fotoPerfil"
+                    width="100px"
+                    src="imagenes/WhatsApp Image 2024-02-20 at 7.23.26 AM.jpeg"
+                    alt=""
+                  />
+                  <h5 class="nombre-title p-3" id="nombreNavbarLabel">
+                    Denisse Chagoya Veloz
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#"
+                        >Home</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Gallery</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Social Media
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Instagram</a></li>
+                        <li><a class="dropdown-item" href="#">WhatsApp</a></li>
+                        <li>
+                          <hr class="dropdown-divider" />
+                        </li>
+                        <li><a class="dropdown-item" href="#">About me</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <!--<form class="d-flex mt-3" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                          </form>-->
+                  <h6 class="alias-title" id="aliasNavbarLabel">
+                    Nickname: Peyton Denisse
+                  </h6>
+                  <h6 class="correo-title" id="correoNavbarLabel">
+                    Correo: dcv78658@lasallebajio.com
+                  </h6>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <div id="carrusel1" class="container-carrusel">
+      <div class="row">
+        <div class="col-12">
+          <div
+            id="carouselExampleIndicators"
+            class="carousel slide"
+            data-bs-theme="dark"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row justify-content-center">
+                  <div class="col-sm-3 mb-3 mb-sm-0 ">
+                    <div class="custom-btn card">
+                      <div class="card-body">
+                        <h5 class="card-title">Practica 1</h5>
+                        <p class="card-text">
+                          Principios de HTML, diferentes tipos de archivos y
+                          tamaños de titulos
+                        </p>
+                        <a href="practica1/index.html" class="btn btn-primary"
+                          >Visit Website
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="custom-btn card">
+                      <div class="card-body">
+                        <h5 class="card-title">Practica 2</h5>
+                        <p class="card-text">
+                          Direferentes tipos de etiquetas, margenes, rellenos, y etiquetas.
+                        </p>
+                        <a href="practica2/index.html" class="btn btn-primary"
+                          >Visit Website
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-3 mb-3 mb-sm-0">
+                    <div class="custom-btn card">
+                      <div class="card-body">
+                        <h5 class="card-title">Practica 3</h5>
+                        <p class="card-text">
+                          Tablas, titulos y navbar con bootstrap, diseños personalizados 
+                        </p>
+                        <a href="practica3/index.html" class="btn btn-primary"
+                          >Visit Website
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="custom-btn card">
+                      <div class="card-body">
+                        <h5 class="card-title">Practica 4</h5>
+                        <p class="card-text">
+                          Tablas, imagentes, conceptos de row y col para la distribucion de espacios 
+                        </p>
+                        <a href="practica4/index.html" class="btn btn-primary"
+                          >Visite Website</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-sm-3 mb-3 mb-sm-0">
+                    <div class="custom-btn card">
+                      <div class="card-body">
+                        <h5 class="card-title">Practica 5</h5>
+                        <p class="card-text">
+                          Iportacion de imagenes desde otras carpetas, hanover sobre cursor 
+                        </p>
+                        <a
+                          href="practica5/index.html"
+                          class="btn btn-primary"
+                          >Visite Website</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="custom-btn card">
+                      <div class="card-body">
+                        <h5 class="card-title">Practica 6</h5>
+                        <p class="card-text">
+                          Efectos y animaciones con CSS, mas herramientas de diseño
+                        </p>
+                        <a href="practica6/index.html" class="btn btn-primary"
+                          >Visite Website</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-3 mb-3 mb-sm-0">
+                    <div class="custom-btn card">
+                      <div class="card-body">
+                        <h5 class="card-title">Practica 7</h5>
+                        <p class="card-text">
+                          Animaciones y transformaciones en CSS, movimientos
+                        </p>
+                        <a href="practica7/index.html" class="btn btn-primary"
+                          >Visite Website</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="custom-btn card">
+                      <div class="card-body">
+                        <h5 class="card-title">Practica 8</h5>
+                        <p class="card-text">
+                          Conociendo las diferentes transformaciones en CSS
+                        </p>
+                        <a href="practica8/index.html" class="btn btn-primary"
+                          >Visite Website</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="Proyecto1" class="cotainer-card" data-bs-theme="dark">
+      <div class="row">
+        <div class="col-12">
+          <div class="card mb-3">
+            <img
+              width="30%"
+              src="imagenes/clon.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Proyecto Clon de Sitio Web</h5>
+              <p class="card-text">
+                Con el conocimiento de HTML y CSS adquiridos en el parcial, la
+                finalidad de este proyecto, es tratar de crear un "clon" del
+                sitio web seleccionado personalmente por cada estudiante, para
+                ponere en practica los conocimietnos visto en clase
+              </p>
+              <p class="card-text">
+                <small class="text-body-secondary"
+                  >Sitio Oficial:
+                  https://www.lamborghini.com/es-en/modelos/revuelto</small
+                >
+              </p>
+              <a href="practica9/index.html" class="btn btn-primary"
+                >Visite Website</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="carrusel2" class="container-carrusel">
+      <div class="row">
+        <div class="col-12">
+          <div
+            id="carouselExampleIndicators2"
+            class="carousel slide"
+            data-bs-theme="dark"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators2"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators2"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators2"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row">
+                  <div class="col-sm-3 mb-3 mb-sm-0">
+                    <div class="custom-btn card">
+                      <div class="card-body">
+                        <h5 class="card-title">Practica 11</h5>
+                        <p class="card-text">
+                          Efectos y filtros en imagenes para el diseño web
+                        </p>
+                        <a href="practica11/index.html" class="btn btn-primary"
+                          >Visite Website</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="custom-btn card">
+                      <div class="card-body">
+                        <h5 class="card-title">Practica 12</h5>
+                        <p class="card-text">
+                          Creando fonsos con Gradiants rax, Feria SM
+                        </p>
+                        <a href="practica12/index.html" class="btn btn-primary"
+                          >Visite Website</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-3 mb-3 mb-sm-0">
+                    <div class="custom-btn card">
+                      <div class="card-body">
+                        <h5 class="card-title">Practica 13</h5>
+                        <p class="card-text">
+                          Sitios responsivos, cambios respecto a los diferentes dispositivos
+                        </p>
+                        <a href="practica13/index.html" class="btn btn-primary"
+                          >Visite Website</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="custom-btn card">
+                      <div class="card-body">
+                        <h5 class="card-title">Practica 14</h5>
+                        <p class="card-text">
+                          Sitios responsivos, cambios respecto a los diferentes dispositivos.
+                        </p>
+                        <a href="practica14/index.html" class="btn btn-primary"
+                          >Visite Website</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-sm-3 mb-3 mb-sm-0">
+                    <div class="custom-btn card">
+                      <div class="card-body">
+                        <h5 class="card-title">practica 15</h5>
+                        <p class="card-text">
+                          With supporting text below as a natural lead-in to
+                          additional content.
+                        </p>
+                        <a href="practica15/index.html" class="btn btn-primary"
+                          >Visite Website</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="custom-btn card">
+                      <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">
+                          With supporting text below as a natural lead-in to
+                          additional content.
+                        </p>
+                        <a href="#" class="btn btn-primary">Visite Website</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-3 mb-3 mb-sm-0">
+                    <div class="custom-btn card">
+                      <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">
+                          With supporting text below as a natural lead-in to
+                          additional content.
+                        </p>
+                        <a href="#" class="btn btn-primary">Visite Website</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="custom-btn card">
+                      <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">
+                          With supporting text below as a natural lead-in to
+                          additional content.
+                        </p>
+                        <a href="#" class="btn btn-primary">Visite Website</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-sm-3 mb-3 mb-sm-0">
+                    <div class="custom-btn card">
+                      <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">
+                          With supporting text below as a natural lead-in to
+                          additional content.
+                        </p>
+                        <a href="#" class="btn btn-primary">Visite Website</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="custom-btn card">
+                      <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">
+                          With supporting text below as a natural lead-in to
+                          additional content.
+                        </p>
+                        <a href="#" class="btn btn-primary">Visite Website</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-3 mb-3 mb-sm-0">
+                    <div class="custom-btn card">
+                      <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">
+                          With supporting text below as a natural lead-in to
+                          additional content.
+                        </p>
+                        <a href="#" class="btn btn-primary">Visite Website</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="custom-btn card">
+                      <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">
+                          With supporting text below as a natural lead-in to
+                          additional content.
+                        </p>
+                        <a href="#" class="btn btn-primary">Visite Website</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleIndicators2"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleIndicators2"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- instalaciones -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
