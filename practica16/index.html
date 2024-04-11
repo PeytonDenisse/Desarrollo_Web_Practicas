@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+
+    <h1>JavaScript (practica 16)</h1>
+    <p id="nombreCompleto">Este es un parrafo</p>
+
+    <script>
+        let edad = 25; 
+        //console.log(miEdad);
+
+        function muestraEdad(miEdad){
+             let edad = miEdad * 10;
+            return edad;
+        }
+
+        console.log(muestraEdad(edad));
+        console.log("edad: "+ edad);
+
+        const PI = 3.1416; // variable constante
+
+        function areaCirculo(radio){
+            return PI * radio * radio;
+        }
+
+        let area = areaCirculo(5);
+        console.log("El area del circulo es: "+ area);
+
+        function saludar(nombre){
+            return "Hola " + nombre;
+        }
+
+        //camelCase - nuevoNombre
+        //PascalCase - NuevoNombre
+        //snake_case - nuevo_nombre
+        //kebab-case - nuevo-nombre : no permitido en JS
+        let nuevoNombre = "Peyton";
+        console.log(saludar(nuevoNombre));
+
+        let estado = true // variable booleana
+        let estado2 = false // variable booleana
+        let arreglo = [1,2,3,4,5]; // variable arreglo
+        let arreglo2 = ["Peyton", "Miguel", "Luis"]; // variable arreglo
+        let arreglo3 = [1, "Peyton", true]; // variable arreglo con diferentes tipos de datos
+        let objeto = {nombre: "Peyton", edad: 25}; // variable objeto combinados 
+
+        console.log(estado);
+        console.log(arreglo);
+
+        let nombre = "Peyton";
+        let apellido = "Chagoya";
+        let nombreCompleto = nombre + " " + apellido;
+
+        console.log(nombreCompleto);
+
+
+        let nombreEnPantalla = document.getElementById("nombreCompleto");
+        nombreEnPantalla.innerHTML = nombreCompleto;
+
+
+
+
+        /*let miVariable = 10; // Variable global
+        let numero = 10; // variable interger
+        let texto = "Hola mundo"; // variable string
+        let booleano = true; // variable boolean
+        
+        console.log(miVariable, numero);
+        console.log("resultado en consola:", miVariable)
+
+
+        // Tipos de variables 
+        /*
+        var = variable actualmente ya no usada
+        let = variable que puede cambiar su valor pero se declara dentro del bloque donde se va a usar
+        const = variable que no puede cambiar su valor y se declara en el bloque donde se va a usar
+        */
+    
+    </script>
+    
+</body>
+</html>
