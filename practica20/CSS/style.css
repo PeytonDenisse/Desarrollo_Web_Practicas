@@ -2,3 +2,32 @@
     object-fit: cover;
     border-radius: 50%;
 }
+
+p { 
+    color: #504c4c;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 125vh;
+}
+
+body{
+    background-color: rgba(255, 255, 255, 0.822);
+}
+
+h1 {
+    color: #c5c2c2;
+}
+
+img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+}
+
+img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    border-radius: 5%; 
+  }

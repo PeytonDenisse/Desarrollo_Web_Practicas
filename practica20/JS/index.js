@@ -43,7 +43,7 @@ let peliculas = [
     {titulo: "Arco da Rua Augusta", imagen: "https://i.pinimg.com/564x/80/a2/d0/80a2d08e7800d7fc01d37c8a065ace31.jpg"},
     {titulo: "Eiffel Tower, París", imagen: "https://i.pinimg.com/564x/65/55/d7/6555d7eea0223fb6582836b2e676288c.jpg"},
     {titulo: "David, Miguel Angel", imagen: "https://i.pinimg.com/564x/4e/e0/56/4ee05677f392ce8d700f173f0ed9b6f0.jpg"},
-    {titulo: "Cupid and Psyche in the Louvre", imagen: "https://i.pinimg.com/564x/b9/82/6c/b9826c12a248db97553450fc098b15b8.jpg"},
+    {titulo: "Cupid and Psyche, the Louvre", imagen: "https://i.pinimg.com/564x/b9/82/6c/b9826c12a248db97553450fc098b15b8.jpg"},
 
 
 
@@ -56,3 +56,24 @@ for (let pelicula of peliculas){
     galeria.innerHTML += `<div class='col-12 col-md-3 text-center'><p>${pelicula.titulo}</p><img src='${pelicula.imagen}' alt='Imagen de ${pelicula.titulo}' class='img-fluid'></div>`;
 }
 
+
+
+//CICLOS WHILE
+
+j = 1;
+
+while(j<30){
+    console.log(j);
+    j++;
+}
+
+let result = '';
+let i = 0;
+
+do {
+    i += 1;
+    result = result + 1;
+    
+} while (i < 5);
+
+console.log("result:",result);
