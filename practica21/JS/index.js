@@ -70,3 +70,8 @@ cadenaHTML += `<ul>`;
 lista.innerHTML = cadenaHTML;
 
 
+function otraFuncion(){
+    
+}
+
+
