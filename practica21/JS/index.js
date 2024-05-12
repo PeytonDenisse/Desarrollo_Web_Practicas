@@ -43,7 +43,7 @@ function miFuncion(cadena, personaX, edadExp){
 
 }
 
-miFuncion("Nombre:",persona, "Edad:", 19);
+miFuncion("Nombre:",persona, "Edad:", edad);
 
 //let resultado2 = miFuncion `Hola ${cadena }${persona} tienes una edad ${edad} años`
 //console.log(resultado2);
