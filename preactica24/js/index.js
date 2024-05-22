@@ -35,7 +35,7 @@ let tareas = [
     }
 ];
 
-// Función para mostrar las tareas
+// mostrar las tareas
 function mostrarTareas() {
     listaTareas.innerHTML = "";
     tareas.forEach((tarea, indice) => {
@@ -79,7 +79,7 @@ function marcarCompletada(indice, checkbox) {
     tareas[indice].completada = checkbox.checked;
 }
 
-// Función para agregar una tarea
+//agregar una tarea
 formulario.addEventListener("submit", (e) => {
     e.preventDefault();
     agregarDatos();
@@ -88,7 +88,7 @@ formulario.addEventListener("submit", (e) => {
     formulario.reset();
 });
 
-// Función para llenar el formulario de edición
+//llenar el formulario de edición
 let llenarFormularioEditar = (indice) => {
     document.getElementById("indiceEditar").value = indice;
     document.getElementById("nombreEditar").value = tareas[indice].nombre;
@@ -99,7 +99,7 @@ let llenarFormularioEditar = (indice) => {
     document.getElementById("audioUrlEditar").value = tareas[indice].audio;
 };
 
-// Función para guardar los cambios de la tarea editada
+// guardar los cambios de la tarea editada
 formularioEditar.addEventListener("submit", (e) => {
     e.preventDefault();
     editarTarea();
@@ -107,7 +107,7 @@ formularioEditar.addEventListener("submit", (e) => {
     mostrarTareas();
 });
 
-// Función para agregar datos
+// agregar datos
 let agregarDatos = () => {
     const imagenUrl = document.getElementById("imagenUrl").value;
     const imagenArchivo = document.getElementById("imagenArchivo").files[0];
@@ -126,7 +126,7 @@ let agregarDatos = () => {
     });
 };
 
-// Función para editar una tarea
+// editar una tarea
 let editarTarea = () => {
     let indice = document.getElementById("indiceEditar").value;
     const imagenUrl = document.getElementById("imagenUrlEditar").value;
@@ -144,7 +144,7 @@ let editarTarea = () => {
     tareas[indice].audio = document.getElementById("audioUrlEditar").value;
 };
 
-// Función para borrar una tarea
+//borrar una tarea
 let borrarTarea = (indice) => {
     if (confirm("¿Estás seguro de eliminar esta tarea?")) {
         tareas.splice(indice, 1);
@@ -152,7 +152,7 @@ let borrarTarea = (indice) => {
     }
 };
 
-// Función para cerrar el modal
+// cerrar el modal
 let cerrarModal = (idModal) => {
     let modal = document.getElementById(idModal);
     let bsModal = bootstrap.Modal.getInstance(modal);
