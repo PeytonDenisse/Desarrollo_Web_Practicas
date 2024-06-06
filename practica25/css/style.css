@@ -1,5 +1,123 @@
-.imagenProducto {
-    width: 250px;
-    height: 250px;
+/* Colores personalizados */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+}
+
+/* Estilos de la navbar */
+.navbar {
+    background-color: var(--primary-color);
+}
+
+.navbar-brand, .navbar-nav .nav-link {
+    color: #fff;
+}
+
+.navbar-brand:hover, .navbar-nav .nav-link:hover {
+    color: var(--light-color);
+}
+
+/* Estilos de las tarjetas */
+.card {
+    border: 1px solid var(--light-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-img-top {
+    height: 200px;
     object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    flex-grow: 1;
+}
+
+.card-footer {
+    background-color: var(--light-color);
+    border-top: none;
+    text-align: center;
+}
+
+.btn {
+    margin-top: 10px;
+}
+
+
+/* Estilos para las tarjetas */
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    margin-bottom: 20px; /* Espacio entre tarjetas */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    margin-bottom: 1rem;
+}
+
+.btn {
+    width: 100%;
+}
+
+.carrito-btn {
+    padding: 0.25rem 0.5rem; /* Ajusta el tamaño del botón */
+    font-size: 0.875rem; /* Ajusta el tamaño del texto dentro del botón */
+}
+
+.carrito-btn .bi {
+    font-size: 1.25rem; /* Ajusta el tamaño del icono */
+}
+
+
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 20px;
+    }
 }
