@@ -1,27 +1,40 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const indice = localStorage.getItem('proyectoSeleccionado');
-    if (indice !== null) {
-        const proyectos = JSON.parse(localStorage.getItem('proyectos')) || [];
-        const proyecto = proyectos[indice];
-        if (proyecto) {
-            document.getElementById('tituloProyecto').textContent = proyecto.nombre;
-            document.getElementById('fechaProyecto').textContent = proyecto.fecha;
-            document.getElementById('descripcionProyecto').textContent = proyecto.descripcion;
-            if (proyecto.imagen) {
-                document.getElementById('imagenProyecto').innerHTML = `<img src="${proyecto.imagen}" class="card-img mb-2" alt="Imagen">`;
-            }
-            if (proyecto.video) {
-                document.getElementById('videoProyecto').innerHTML = `<iframe class="card-video mb-2" width="100%" height="200" src="${convertirUrlYouTube(proyecto.video)}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
-            }
-            if (proyecto.audio) {
-                document.getElementById('audioProyecto').innerHTML = `<audio controls src="${proyecto.audio}" class="card-audio w-100 mb-2"></audio>`;
-            }
+    const proyecto = JSON.parse(localStorage.getItem('proyectoDetalle'));
+
+    if (proyecto) {
+        document.getElementById('proyectoNombre').textContent = proyecto.nombre;
+        document.getElementById('proyectoFecha').textContent = proyecto.fecha;
+        document.getElementById('proyectoDescripcion').textContent = proyecto.descripcion;
+
+        if (proyecto.video) {
+            document.getElementById('proyectoVideo').src = convertirUrlYouTube(proyecto.video);
+            document.getElementById('proyectoVideo').style.display = 'block';
+        } else {
+            document.getElementById('proyectoVideo').style.display = 'none';
+        }
+
+        if (proyecto.imagen) {
+            document.getElementById('proyectoImagen').src = proyecto.imagen;
+            document.getElementById('proyectoImagen').style.display = 'block';
+        } else {
+            document.getElementById('proyectoImagen').style.display = 'none';
+        }
+
+        if (proyecto.audio) {
+            document.getElementById('proyectoAudio').src = proyecto.audio;
+            document.getElementById('proyectoAudio').style.display = 'block';
+        } else {
+            document.getElementById('proyectoAudio').style.display = 'none';
         }
     }
-});
 
-function convertirUrlYouTube(url) {
-    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
-    const match = url.match(regExp);
-    return (match && match[2].length == 11) ? `https://www.youtube.com/embed/${match[2]}` : null;
-}
+    document.getElementById('backButton').addEventListener('click', function() {
+        window.history.back();
+    });
+
+    function convertirUrlYouTube(url) {
+        const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+        const match = url.match(regExp);
+        return (match && match[2].length == 11) ? `https://www.youtube.com/embed/${match[2]}` : null;
+    }
+});

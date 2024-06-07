@@ -70,6 +70,53 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+// index.js
+document.addEventListener('DOMContentLoaded', function() {
+    function handleSearch() {
+        const searchInput = document.getElementById('search');
+        const cards = document.querySelectorAll('.card');
+
+        searchInput.addEventListener('input', function() {
+            const searchTerm = searchInput.value.toLowerCase();
+            cards.forEach(function(card) {
+                const title = card.querySelector('.card-title').textContent.toLowerCase();
+                const description = card.querySelector('.card-text').textContent.toLowerCase();
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    card.parentElement.style.display = 'block';
+                } else {
+                    card.parentElement.style.display = 'none';
+                }
+            });
+        });
+    }
+
+    handleSearch();
+
+    // Redirigir al hacer clic en el logo
+    document.querySelectorAll('.navbar-brand').forEach(function(logo) {
+        logo.addEventListener('click', function() {
+            window.location.href = 'home.html';
+        });
+    });
+
+    // Redirigir desde el menú desplegable
+    document.querySelectorAll('.dropdown-item').forEach(function(menuItem) {
+        menuItem.addEventListener('click', function(event) {
+            if (event.target.textContent.includes('Ver Proyectos')) {
+                window.location.href = 'home.html';
+            } else if (event.target.textContent.includes('Mis Proyectos')) {
+                window.location.href = 'dashboard.html';
+            }
+        });
+    });
+
+    // Manejar el botón de logout
+    document.getElementById('logoutButton').addEventListener('click', function() {
+        window.location.href = 'index.html';
+    });
+});
+
+
 
 
 
@@ -85,6 +132,37 @@ document.addEventListener('DOMContentLoaded', function() {
         mostrarTareas();
     }
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Asignar evento de agregar proyecto
+    if (document.getElementById('formularioAgregar')) {
+        document.getElementById('formularioAgregar').addEventListener('submit', agregarProyecto);
+    }
+
+    // Asignar evento de guardar cambios
+    if (document.getElementById('formularioEditar')) {
+        document.getElementById('formularioEditar').addEventListener('submit', guardarCambios);
+    }
+
+    // Mostrar proyectos al cargar la página
+    mostrarProyectos();
+});
+
+
+
+
+
+
+// Función para convertir URL de YouTube a formato embed
+function convertirUrlYouTube(url) {
+    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+    const match = url.match(regExp);
+    return (match && match[2].length == 11) ? `https://www.youtube.com/embed/${match[2]}` : null;
+}
+
+
+
 
 let proyectos = [
     {
@@ -313,3 +391,56 @@ function verProyecto(indice) {
 }
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    function handleSearch() {
+        const searchInput = document.getElementById('search');
+        const cards = document.querySelectorAll('.card');
+
+        searchInput.addEventListener('input', function() {
+            const searchTerm = searchInput.value.toLowerCase();
+            cards.forEach(function(card) {
+                const title = card.querySelector('.card-title').textContent.toLowerCase();
+                const description = card.querySelector('.card-text').textContent.toLowerCase();
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    card.parentElement.style.display = 'block';
+                } else {
+                    card.parentElement.style.display = 'none';
+                }
+            });
+        });
+    }
+
+    handleSearch();
+
+    const listaTareas = document.getElementById('listaTareas');
+    proyectos.forEach((proyecto, indice) => {
+        const cardHtml = `
+        <div class="col-12 col-md-6 col-lg-4 mb-3">
+            <div class="card bg-dark text-white">
+                <div class="card-body">
+                    <h5 class="card-title mb-3 bg-dark" style="color: white; padding: 10px; border-radius: 10px">${proyecto.nombre}</h5>
+                    ${proyecto.imagen ? `<img src="${proyecto.imagen}" class="card-img mb-2" alt="Imagen">` : ""}
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-dark text-white">${proyecto.video ? `<iframe class="card-video mb-2" width="100%" height="200" src="${convertirUrlYouTube(proyecto.video)}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>` : ""}</li>
+                        <li class="list-group-item bg-dark text-white">${proyecto.audio ? `<audio controls src="${proyecto.audio}" class="card-audio w-100 mb-2"></audio>` : ""}</li>
+                    </ul>
+                    <div class="mb-3">
+                        <h6 class="card-subtitle mb-2 text-muted text-end">${proyecto.fecha}</h6>
+                        <p class="card-text">${proyecto.descripcion}</p>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">Ver</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        `;
+        listaTareas.innerHTML += cardHtml;
+    });
+
+    function convertirUrlYouTube(url) {
+        const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+        const match = url.match(regExp);
+        return (match && match[2].length == 11) ? `https://www.youtube.com/embed/${match[2]}` : null;
+    }
+});
